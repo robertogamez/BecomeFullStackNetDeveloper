@@ -1,11 +1,11 @@
-﻿@model IEnumerable<GigHub.Models.Gig>
+﻿@model GigHub.ViewModel.HomeViewModel
 
 @{
     ViewBag.Title = "Home Page";
 }
 
 <ul class="gigs">
-    @foreach (var gig in Model)
+    @foreach (var gig in Model.UpcomingGigs)
     {
         <li>
             <div class="date">
@@ -19,11 +19,56 @@
             <div class="details">
                 <div class="artist">
                     @gig.Artist.Name
+                    @if (Model.ShowActions)
+                    {
+                        <button class="btn btn-link btn-sm js-toggle-follow"
+                                data-user-id="@gig.ArtistId">
+                            Follow
+                        </button>
+                    }
                 </div>
                 <div class="genre">
                     @gig.Genre.Name
                 </div>
+                @if (Model.ShowActions)
+                {
+                    <button data-gig-id="@gig.Id"
+                            class="btn btn-sm btn-default pull-right js-toggle-attendance">
+                        Going?
+                    </button>
+                }
             </div>
         </li>
     }
 </ul>
+
+@section scripts {
+    <script>
+        $(function () {
+            $('.js-toggle-attendance').on('click', function (e) {
+                var $button = $(e.target);
+
+                $.post('/api/attendances', { gigId: $button.attr('data-gig-id') })
+                    .then(function () {
+                        $button.removeClass('btn-default')
+                                    .addClass('btn-info')
+                                    .text('Going');
+                    }, function () {
+                        alert('Something failed!');
+                    });
+            });
+
+            $('.js-toggle-follow').on('click', function (e) {
+                var $button = $(e.target);
+
+                $.post('/api/followings', {
+                    followeeId: $button.attr('data-user-id')
+                }).then(function () {
+                    $button.text('Following');
+                }, function () {
+                    alert('Something failed!');
+                })
+            });
+        });
+    </script>
+}
