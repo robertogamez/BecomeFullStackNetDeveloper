@@ -7,7 +7,17 @@ namespace GigHub.ViewModel
 {
     public class GigFormViewModel
     {
+        public int Id { get; set; }
+
         public string Heading { get; set; }
+
+        public string Action
+        {
+            get
+            {
+                return (Id != 0) ? "Update" : "Create";
+            }
+        }
 
         [Required]
         public string Venue { get; set; }
