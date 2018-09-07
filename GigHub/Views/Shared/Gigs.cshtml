@@ -69,31 +69,8 @@
 @section scripts {
     <script>
         $(function () {
-            $('.js-toggle-attendance').on('click', function (e) {
-                var $button = $(e.target);
-                if ($button.hasClass('btn-default')) {
-                    $.post('/api/attendances', { gigId: $button.attr('data-gig-id') })
-                    .then(function () {
-                        $button.removeClass('btn-default')
-                                    .addClass('btn-info')
-                                    .text('Going');
-                    }, function () {
-                        alert('Something failed!');
-                    });
-                } else {
-                    $.ajax({
-                        url: '/api/attendances/' + $button.attr('data-gig-id'),
-                        method: 'DELETE'
-                    }).then(function () {
-                        $button.removeClass('btn-info')
-                                    .addClass('btn-default')
-                                    .text('Going?');
-                    }, function () {
-                        alert("Something failed");
-                    });
-                }
-
-            });
+            
+            GigsController.init();
 
             $('.js-toggle-follow').on('click', function (e) {
                 var $button = $(e.target);
