@@ -2,8 +2,8 @@
 
     var $button;
 
-    var init = function () {
-        $('.js-toggle-attendance').on('click', toggleAttendance);
+    var init = function (container) {
+        $(container).on('click', '.js-toggle-attendance', toggleAttendance);
     };
 
     var toggleAttendance = function (e) {
