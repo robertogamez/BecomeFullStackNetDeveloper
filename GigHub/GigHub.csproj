@@ -227,47 +227,47 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807161428148_InitialModel.cs" />
-    <Compile Include="Migrations\201807161428148_InitialModel.Designer.cs">
+    <Compile Include="Persistence\Migrations\201807161428148_InitialModel.cs" />
+    <Compile Include="Persistence\Migrations\201807161428148_InitialModel.Designer.cs">
       <DependentUpon>201807161428148_InitialModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807161531263_CreateGigTable.cs" />
-    <Compile Include="Migrations\201807161531263_CreateGigTable.Designer.cs">
+    <Compile Include="Persistence\Migrations\201807161531263_CreateGigTable.cs" />
+    <Compile Include="Persistence\Migrations\201807161531263_CreateGigTable.Designer.cs">
       <DependentUpon>201807161531263_CreateGigTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807161554387_OverrideConventionsForGigsAndGenres.cs" />
-    <Compile Include="Migrations\201807161554387_OverrideConventionsForGigsAndGenres.Designer.cs">
+    <Compile Include="Persistence\Migrations\201807161554387_OverrideConventionsForGigsAndGenres.cs" />
+    <Compile Include="Persistence\Migrations\201807161554387_OverrideConventionsForGigsAndGenres.Designer.cs">
       <DependentUpon>201807161554387_OverrideConventionsForGigsAndGenres.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807161621151_PopulateGenresTable.cs" />
-    <Compile Include="Migrations\201807161621151_PopulateGenresTable.Designer.cs">
+    <Compile Include="Persistence\Migrations\201807161621151_PopulateGenresTable.cs" />
+    <Compile Include="Persistence\Migrations\201807161621151_PopulateGenresTable.Designer.cs">
       <DependentUpon>201807161621151_PopulateGenresTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807171539085_AddForeignKeyPropertiesToGig.cs" />
-    <Compile Include="Migrations\201807171539085_AddForeignKeyPropertiesToGig.Designer.cs">
+    <Compile Include="Persistence\Migrations\201807171539085_AddForeignKeyPropertiesToGig.cs" />
+    <Compile Include="Persistence\Migrations\201807171539085_AddForeignKeyPropertiesToGig.Designer.cs">
       <DependentUpon>201807171539085_AddForeignKeyPropertiesToGig.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807311534039_AddNameToApplicationUser.cs" />
-    <Compile Include="Migrations\201807311534039_AddNameToApplicationUser.Designer.cs">
+    <Compile Include="Persistence\Migrations\201807311534039_AddNameToApplicationUser.cs" />
+    <Compile Include="Persistence\Migrations\201807311534039_AddNameToApplicationUser.Designer.cs">
       <DependentUpon>201807311534039_AddNameToApplicationUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808021408010_AddAttendance.cs" />
-    <Compile Include="Migrations\201808021408010_AddAttendance.Designer.cs">
+    <Compile Include="Persistence\Migrations\201808021408010_AddAttendance.cs" />
+    <Compile Include="Persistence\Migrations\201808021408010_AddAttendance.Designer.cs">
       <DependentUpon>201808021408010_AddAttendance.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808061704505_AddFollowingModel.cs" />
-    <Compile Include="Migrations\201808061704505_AddFollowingModel.Designer.cs">
+    <Compile Include="Persistence\Migrations\201808061704505_AddFollowingModel.cs" />
+    <Compile Include="Persistence\Migrations\201808061704505_AddFollowingModel.Designer.cs">
       <DependentUpon>201808061704505_AddFollowingModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808161455512_AddIsCanceledToGig.cs" />
-    <Compile Include="Migrations\201808161455512_AddIsCanceledToGig.Designer.cs">
+    <Compile Include="Persistence\Migrations\201808161455512_AddIsCanceledToGig.cs" />
+    <Compile Include="Persistence\Migrations\201808161455512_AddIsCanceledToGig.Designer.cs">
       <DependentUpon>201808161455512_AddIsCanceledToGig.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808202133179_AddNotification.cs" />
-    <Compile Include="Migrations\201808202133179_AddNotification.Designer.cs">
+    <Compile Include="Persistence\Migrations\201808202133179_AddNotification.cs" />
+    <Compile Include="Persistence\Migrations\201808202133179_AddNotification.Designer.cs">
       <DependentUpon>201808202133179_AddNotification.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Persistence\Migrations\Configuration.cs" />
     <Compile Include="Core\ViewModel\AccountViewModels.cs" />
     <Compile Include="Core\Models\Attendance.cs" />
     <Compile Include="Core\Models\Following.cs" />
@@ -389,34 +389,34 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807161428148_InitialModel.resx">
+    <EmbeddedResource Include="Persistence\Migrations\201807161428148_InitialModel.resx">
       <DependentUpon>201807161428148_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807161531263_CreateGigTable.resx">
+    <EmbeddedResource Include="Persistence\Migrations\201807161531263_CreateGigTable.resx">
       <DependentUpon>201807161531263_CreateGigTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807161554387_OverrideConventionsForGigsAndGenres.resx">
+    <EmbeddedResource Include="Persistence\Migrations\201807161554387_OverrideConventionsForGigsAndGenres.resx">
       <DependentUpon>201807161554387_OverrideConventionsForGigsAndGenres.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807161621151_PopulateGenresTable.resx">
+    <EmbeddedResource Include="Persistence\Migrations\201807161621151_PopulateGenresTable.resx">
       <DependentUpon>201807161621151_PopulateGenresTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807171539085_AddForeignKeyPropertiesToGig.resx">
+    <EmbeddedResource Include="Persistence\Migrations\201807171539085_AddForeignKeyPropertiesToGig.resx">
       <DependentUpon>201807171539085_AddForeignKeyPropertiesToGig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311534039_AddNameToApplicationUser.resx">
+    <EmbeddedResource Include="Persistence\Migrations\201807311534039_AddNameToApplicationUser.resx">
       <DependentUpon>201807311534039_AddNameToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808021408010_AddAttendance.resx">
+    <EmbeddedResource Include="Persistence\Migrations\201808021408010_AddAttendance.resx">
       <DependentUpon>201808021408010_AddAttendance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808061704505_AddFollowingModel.resx">
+    <EmbeddedResource Include="Persistence\Migrations\201808061704505_AddFollowingModel.resx">
       <DependentUpon>201808061704505_AddFollowingModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808161455512_AddIsCanceledToGig.resx">
+    <EmbeddedResource Include="Persistence\Migrations\201808161455512_AddIsCanceledToGig.resx">
       <DependentUpon>201808161455512_AddIsCanceledToGig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808202133179_AddNotification.resx">
+    <EmbeddedResource Include="Persistence\Migrations\201808202133179_AddNotification.resx">
       <DependentUpon>201808202133179_AddNotification.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
