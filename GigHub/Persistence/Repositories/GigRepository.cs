@@ -28,7 +28,8 @@ namespace GigHub.Persistence.Repositories
         public IEnumerable<Gig> GetUpcomingGigsByArtist(string artistId)
         {
             return _context.Gigs
-                    .Where(g => g.ArtistId == artistId &&
+                    .Where(g =>
+                                g.ArtistId == artistId &&
                                 g.DateTime > DateTime.Now &&
                                 !g.IsCanceled)
                     .Include(g => g.Genre)
